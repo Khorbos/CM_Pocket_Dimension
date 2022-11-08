@@ -9,7 +9,7 @@ using Verse;
 using Verse.Sound;
 using System.Text;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class Building_PocketDimensionBox : Building_PocketDimensionEntranceBase
     {
@@ -172,8 +172,8 @@ namespace CM_PocketDimension
                     {
                         SetDesiredMapSize(desiredMapSize - 1);
                     },
-                    defaultLabel = "CM_DecreasePocketDimensionSizeLabel".Translate(),
-                    defaultDesc = "CM_DecreasePocketDimensionSizeDescription".Translate(),
+                    defaultLabel = "KB_DecreasePocketDimensionSizeLabel".Translate(),
+                    defaultDesc = "KB_DecreasePocketDimensionSizeDescription".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Minus"),
                     disabled = (desiredMapSize <= minMapSize),
                 };
@@ -185,8 +185,8 @@ namespace CM_PocketDimension
                     {
                         SetDesiredMapSize(desiredMapSize + 1);
                     },
-                    defaultLabel = "CM_IncreasePocketDimensionSizeLabel".Translate(),
-                    defaultDesc = "CM_IncreasePocketDimensionSizeDescription".Translate(),
+                    defaultLabel = "KB_IncreasePocketDimensionSizeLabel".Translate(),
+                    defaultDesc = "KB_IncreasePocketDimensionSizeDescription".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Plus"),
                     disabled = (desiredMapSize >= maxMapSize),
                 };
@@ -198,8 +198,8 @@ namespace CM_PocketDimension
                     {
                         InitializePocketDimension();
                     },
-                    defaultLabel = "CM_CreatePocketDimension".Translate(),
-                    defaultDesc = "CM_CreatePocketDimension".Translate(),
+                    defaultLabel = "KB_CreatePocketDimension".Translate(),
+                    defaultDesc = "KB_CreatePocketDimension".Translate(),
                     icon = ContentFinder<Texture2D>.Get("Things/Mote/ShotHit_Spark"),
                     disabled = (compCreator == null || 
                                 compCreator.SupplyCount < desiredComponentCount || 
@@ -313,7 +313,7 @@ namespace CM_PocketDimension
             this.dimensionSeed = Find.TickManager.TicksAbs.ToString();
 
             // The new map must be connected to a parent on the world map
-            var mapParent = (MapParent_PocketDimension)WorldObjectMaker.MakeWorldObject(PocketDimensionDefOf.CM_WorldObject_PocketDimension);
+            var mapParent = (MapParent_PocketDimension)WorldObjectMaker.MakeWorldObject(PocketDimensionDefOf.KB_WorldObject_PocketDimension);
             mapParent.Tile = this.Map.Tile;
             mapParent.SetFaction(Faction.OfPlayer);
             Find.WorldObjects.Add(mapParent);
@@ -327,7 +327,7 @@ namespace CM_PocketDimension
             Find.World.info.seedString = cachedSeedString;
 
             // Permanent darkness - seems moot since adding roof and walls...
-            GameCondition_NoSunlight gameCondition_NoSunlight = (GameCondition_NoSunlight)GameConditionMaker.MakeCondition(PocketDimensionDefOf.CM_PocketDimensionCondition, -1);
+            GameCondition_NoSunlight gameCondition_NoSunlight = (GameCondition_NoSunlight)GameConditionMaker.MakeCondition(PocketDimensionDefOf.KB_PocketDimensionCondition, -1);
             gameCondition_NoSunlight.Permanent = true;
             generatedMap.gameConditionManager.RegisterCondition(gameCondition_NoSunlight);
 
@@ -347,9 +347,9 @@ namespace CM_PocketDimension
             Building_PocketDimensionExit exit = thingList.First() as Building_PocketDimensionExit;
             exit.dimensionSeed = this.dimensionSeed;
             if (!string.IsNullOrEmpty(this.uniqueName))
-                exit.uniqueName = "CM_PocketDimension_ExitName".Translate(this.uniqueName);
+                exit.uniqueName = "KB_PocketDimension_ExitName".Translate(this.uniqueName);
             else
-                exit.uniqueName = "CM_PocketDimension_ExitName".Translate(this.LabelCap);
+                exit.uniqueName = "KB_PocketDimension_ExitName".Translate(this.LabelCap);
 
             exit.SetVentOpen(ventOpen);
 
@@ -357,7 +357,7 @@ namespace CM_PocketDimension
 
             PocketDimensionUtility.Exits[this.dimensionSeed] = exit;
 
-            Messages.Message("CM_PocketDimensionCreated".Translate(), new TargetInfo(this), MessageTypeDefOf.PositiveEvent);
+            Messages.Message("KB_PocketDimensionCreated".Translate(), new TargetInfo(this), MessageTypeDefOf.PositiveEvent);
 
             ThingDef moteDef = DefDatabase<ThingDef>.GetNamedSilentFail("Mote_PsycastPsychicEffect");
             SoundDef soundDef = DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Exit");
@@ -477,18 +477,18 @@ namespace CM_PocketDimension
                 inspectString = base.GetInspectString();
 
                 if (mapSizeToDisplay > 0)
-                    inspectString = AddInspectStringLine(inspectString, "CM_PocketDimension_MapSize".Translate(mapSizeToDisplay));
+                    inspectString = AddInspectStringLine(inspectString, "KB_PocketDimension_MapSize".Translate(mapSizeToDisplay));
 
                 return inspectString;
             }
 
             if (mapSizeToDisplay > 0)
-                inspectString = AddInspectStringLine(inspectString, "CM_PocketDimension_MapSize".Translate(mapSizeToDisplay));
+                inspectString = AddInspectStringLine(inspectString, "KB_PocketDimension_MapSize".Translate(mapSizeToDisplay));
 
             if (!MapCreated)
             {
                 if (desiredEnergyAmount >= 1.0f)
-                    inspectString = AddInspectStringLine(inspectString, (((string)("CM_BatteryPowerNeeded".Translate() + ": " + (desiredEnergyAmount).ToString("#####0") + " Wd"))));
+                    inspectString = AddInspectStringLine(inspectString, (((string)("KB_BatteryPowerNeeded".Translate() + ": " + (desiredEnergyAmount).ToString("#####0") + " Wd"))));
             }
             else
             {

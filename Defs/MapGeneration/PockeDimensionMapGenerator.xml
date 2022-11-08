@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <MapGeneratorDef Name="CM_PocketDimensionMapGenerator">
-	<defName>CM_PocketDimensionMapGenerator</defName>
+  <MapGeneratorDef Name="KB_PocketDimensionMapGenerator">
+	<defName>KB_PocketDimensionMapGenerator</defName>
 	<genSteps>
 		<li>PocketDimensionTerrain</li>
 		<li>PocketDimensionPlayerStartSpot</li>
@@ -13,13 +13,13 @@
    <GenStepDef>
     <defName>PocketDimensionTerrain</defName>
     <order>10</order>
-    <genStep Class="CM_PocketDimension.GenStep_PocketDimension"/>
+    <genStep Class="KB_PocketDimension.GenStep_PocketDimension"/>
   </GenStepDef>
   
   <GenStepDef>
     <defName>PocketDimensionPlayerStartSpot</defName>
     <order>600</order>
-    <genStep Class="CM_PocketDimension.GenStep_PocketDimensionStartSpot"/>
+    <genStep Class="KB_PocketDimension.GenStep_PocketDimensionStartSpot"/>
   </GenStepDef>
 
   <GenStepDef>

@@ -2,7 +2,7 @@
 <Defs>
 
   <RoofDef>
-    <defName>CM_PocketDimensionRoof</defName>
+    <defName>KB_PocketDimensionRoof</defName>
     <label>dimensional containment field</label>
     <isThickRoof>true</isThickRoof>
     <isNatural>false</isNatural>

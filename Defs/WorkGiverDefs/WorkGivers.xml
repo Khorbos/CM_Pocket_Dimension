@@ -2,9 +2,9 @@
 <Defs>
 
   <WorkGiverDef>
-    <defName>CM_PocketDimension_WorkGiver_SupplyBoxComponents</defName>
+    <defName>KB_PocketDimension_WorkGiver_SupplyBoxComponents</defName>
     <label>supply device with components</label>
-    <giverClass>CM_PocketDimension.WorkGiver_SupplyBoxComponents</giverClass>
+    <giverClass>KB_PocketDimension.WorkGiver_SupplyBoxComponents</giverClass>
     <workType>Hauling</workType>
     <verb>supply</verb>
     <gerund>supplying</gerund>
@@ -16,9 +16,9 @@
   </WorkGiverDef>
   
   <WorkGiverDef>
-    <defName>CM_PocketDimension_WorkGiver_PressButton</defName>
+    <defName>KB_PocketDimension_WorkGiver_PressButton</defName>
     <label>press buttons</label>
-    <giverClass>CM_PocketDimension.WorkGiver_PressButton</giverClass>
+    <giverClass>KB_PocketDimension.WorkGiver_PressButton</giverClass>
     <workType>BasicWorker</workType>
     <verb>press button on</verb>
     <gerund>pressing button on</gerund>

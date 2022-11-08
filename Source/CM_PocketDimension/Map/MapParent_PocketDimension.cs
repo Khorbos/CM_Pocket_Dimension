@@ -2,7 +2,7 @@
 using RimWorld.Planet;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class MapParent_PocketDimension : MapParent
     {
@@ -58,13 +58,13 @@ namespace CM_PocketDimension
         {
             if (!this.shouldBeDeleted)
             {
-                TaggedString label = "CM_PocketDimensionDestroyedLetterLabel".Translate();
-                TaggedString text = "CM_PocketDimensionDestroyedLetterText".Translate();
+                TaggedString label = "KB_PocketDimensionDestroyedLetterLabel".Translate();
+                TaggedString text = "KB_PocketDimensionDestroyedLetterText".Translate();
 
                 if (lost)
                 {
-                    label = "CM_PocketDimensionLostLetterLabel".Translate();
-                    text = "CM_PocketDimensionLostLetterText".Translate();
+                    label = "KB_PocketDimensionLostLetterLabel".Translate();
+                    text = "KB_PocketDimensionLostLetterText".Translate();
                 }
 
                 Building_PocketDimensionBox box = PocketDimensionUtility.GetBox(this.dimensionSeed);
@@ -74,16 +74,16 @@ namespace CM_PocketDimension
                     if (thingHolder != null)
                     {
                         LookTargets lookTarget = new LookTargets(thingHolder.Position, thingHolder.Map);
-                        Find.LetterStack.ReceiveLetter(label, text, PocketDimensionDefOf.CM_PocketDimensionBreachedLetter, lookTarget);
+                        Find.LetterStack.ReceiveLetter(label, text, PocketDimensionDefOf.KB_PocketDimensionBreachedLetter, lookTarget);
                     }
                     else
                     {
-                        Find.LetterStack.ReceiveLetter(label, text, PocketDimensionDefOf.CM_PocketDimensionBreachedLetter);
+                        Find.LetterStack.ReceiveLetter(label, text, PocketDimensionDefOf.KB_PocketDimensionBreachedLetter);
                     }
                 }
                 else
                 {
-                    Find.LetterStack.ReceiveLetter(label, text, PocketDimensionDefOf.CM_PocketDimensionBreachedLetter);
+                    Find.LetterStack.ReceiveLetter(label, text, PocketDimensionDefOf.KB_PocketDimensionBreachedLetter);
                 }
 
                 if (box != null)

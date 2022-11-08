@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class JobDriver_PressButton : JobDriver
     {
@@ -16,7 +16,7 @@ namespace CM_PocketDimension
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedOrNull(TargetIndex.A);
-            this.FailOn(() => (base.Map.designationManager.DesignationOn(base.TargetThingA, PocketDimensionDefOf.CM_PocketDimension_Designation_PressButton) == null) ? true : false);
+            this.FailOn(() => (base.Map.designationManager.DesignationOn(base.TargetThingA, PocketDimensionDefOf.KB_PocketDimension_Designation_PressButton) == null) ? true : false);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
             yield return Toils_General.Wait(15).FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
             Toil finalize = new Toil();
@@ -32,7 +32,7 @@ namespace CM_PocketDimension
                         compHasButton.DoPress();
                     }
                 }
-                actor.records.Increment(PocketDimensionDefOf.CM_PocketDimension_Record_ButtonsPressed);
+                actor.records.Increment(PocketDimensionDefOf.KB_PocketDimension_Record_ButtonsPressed);
             };
             finalize.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return finalize;

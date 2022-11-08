@@ -7,7 +7,7 @@ using Verse.AI;
 using UnityEngine;
 using HarmonyLib;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     static class Order_CarryToPocketDimension
@@ -75,9 +75,9 @@ namespace CM_PocketDimension
                     {
 
                         // Add menu option to carry prisoner to pocket dimension entrance/exit
-                        FloatMenuOption option = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("CM_CarryToPocketDimension".Translate(targetPrisoner.Thing.LabelCap, entrance), delegate ()
+                        FloatMenuOption option = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("KB_CarryToPocketDimension".Translate(targetPrisoner.Thing.LabelCap, entrance), delegate ()
                         {
-                            Job job = JobMaker.MakeJob(PocketDimensionDefOf.CM_CarryToPocket, targetPrisoner, entrance);
+                            Job job = JobMaker.MakeJob(PocketDimensionDefOf.KB_CarryToPocket, targetPrisoner, entrance);
                             pawn.jobs.TryTakeOrderedJob(job);
                             //pawn.jobs.StartJob(job, JobCondition.InterruptForced);
                         }, MenuOptionPriority.High), pawn, targetPrisoner);

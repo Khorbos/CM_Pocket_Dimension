@@ -8,7 +8,7 @@ using UnityEngine;
 using HarmonyLib;
 using System;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class WorkGiver_SupplyBoxComponents : WorkGiver_Scanner
     {
@@ -50,7 +50,7 @@ namespace CM_PocketDimension
             }
             if (FindBestComponents(pawn, pocketDimensionBox) == null)
             {
-                JobFailReason.Is("CM_PocketDimension_NoComponentsToSupply".Translate(pocketDimensionBox.TryGetComp<CompPocketDimensionCreator>().Props.componentLabel));
+                JobFailReason.Is("KB_PocketDimension_NoComponentsToSupply".Translate(pocketDimensionBox.TryGetComp<CompPocketDimensionCreator>().Props.componentLabel));
                 return false;
             }
             return true;
@@ -61,7 +61,7 @@ namespace CM_PocketDimension
             Building_PocketDimensionBox pocketDimensionBox = t as Building_PocketDimensionBox;
             Thing components = FindBestComponents(pawn, pocketDimensionBox);
 
-            return JobMaker.MakeJob(PocketDimensionDefOf.CM_PocketDimension_Job_SupplyBoxComponents, t, components);
+            return JobMaker.MakeJob(PocketDimensionDefOf.KB_PocketDimension_Job_SupplyBoxComponents, t, components);
         }
 
         private Thing FindBestComponents(Pawn pawn, Building_PocketDimensionBox pocketDimensionBox)

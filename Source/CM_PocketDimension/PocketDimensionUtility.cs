@@ -3,7 +3,7 @@
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     static class PocketDimensionUtility
     {
@@ -54,7 +54,7 @@ namespace CM_PocketDimension
 
             if (mapParent != null && mapParent.Map != null)
             {
-                List<Thing> wallList = mapParent.Map.listerThings.ThingsOfDef(PocketDimensionDefOf.CM_PocketDimensionWall);
+                List<Thing> wallList = mapParent.Map.listerThings.ThingsOfDef(PocketDimensionDefOf.KB_PocketDimensionWall);
 
                 if (wallList.Count == 0)
                     return null;
@@ -85,7 +85,7 @@ namespace CM_PocketDimension
 
         public static void ClaimWalls(Map map, Faction faction)
         {
-            List<Thing> wallList = map.listerThings.ThingsOfDef(PocketDimensionDefOf.CM_PocketDimensionWall);
+            List<Thing> wallList = map.listerThings.ThingsOfDef(PocketDimensionDefOf.KB_PocketDimensionWall);
             foreach (Thing wall in wallList)
             {
                 Building wallBuilding = wall as Building;

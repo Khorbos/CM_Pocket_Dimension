@@ -7,7 +7,7 @@ using RimWorld;
 using Verse;
 using Verse.Sound;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     public class CompHasButton : ThingComp
@@ -83,13 +83,13 @@ namespace CM_PocketDimension
 
         private void DesignateForFlicking()
         {
-            if (parent.Map?.designationManager.DesignationOn(parent, PocketDimensionDefOf.CM_PocketDimension_Designation_PressButton) == null)
-                parent.Map.designationManager.AddDesignation(new Designation(parent, PocketDimensionDefOf.CM_PocketDimension_Designation_PressButton));
+            if (parent.Map?.designationManager.DesignationOn(parent, PocketDimensionDefOf.KB_PocketDimension_Designation_PressButton) == null)
+                parent.Map.designationManager.AddDesignation(new Designation(parent, PocketDimensionDefOf.KB_PocketDimension_Designation_PressButton));
         }
 
         private void UndesignateForFlicking()
         {
-            parent.MapHeld.designationManager.DesignationOn(parent, PocketDimensionDefOf.CM_PocketDimension_Designation_PressButton)?.Delete();
+            parent.MapHeld.designationManager.DesignationOn(parent, PocketDimensionDefOf.KB_PocketDimension_Designation_PressButton)?.Delete();
         }
 
         public void SetActiveState(bool active)
@@ -111,9 +111,9 @@ namespace CM_PocketDimension
             SoundDefOf.FlickSwitch.PlayOneShot(new TargetInfo(parent.Position, parent.Map));
 
             if (turnedOff)
-                parent.BroadcastCompSignal("CM_PocketDimension_ButtonPressed_Off");
+                parent.BroadcastCompSignal("KB_PocketDimension_ButtonPressed_Off");
             else
-                parent.BroadcastCompSignal("CM_PocketDimension_ButtonPressed_On");
+                parent.BroadcastCompSignal("KB_PocketDimension_ButtonPressed_On");
 
             if (!string.IsNullOrEmpty(Props.extraPressSignal))
                 parent.BroadcastCompSignal(Props.extraPressSignal);

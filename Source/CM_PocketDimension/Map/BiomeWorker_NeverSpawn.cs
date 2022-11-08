@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using RimWorld.Planet;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class BiomeWorker_NeverSpawn : BiomeWorker
     {

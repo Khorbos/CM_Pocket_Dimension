@@ -3,9 +3,9 @@
 
   <!-- Empty box no longer in use, keeping for backward compatibility -->
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionEmpty</defName>
+    <defName>KB_PocketDimensionEmpty</defName>
     <label>dimensional containment box</label>
-	<thingClass>CM_PocketDimension.Building_PocketDimensionEmpty</thingClass>
+	<thingClass>KB_PocketDimension.Building_PocketDimensionEmpty</thingClass>
     <description>An empty containment field for a pocket dimension.</description>
     <graphicData>	
       <texPath>Things/Building/PocketDimensionBox/Dim_Empty</texPath>
@@ -69,9 +69,9 @@
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionBox</defName>
+    <defName>KB_PocketDimensionBox</defName>
     <label>pocket dimension</label>
-	<thingClass>CM_PocketDimension.Building_PocketDimensionBox</thingClass>
+	<thingClass>KB_PocketDimension.Building_PocketDimensionBox</thingClass>
     <description>A containment field for a pocket dimension.</description>
     <graphicData>	
       <texPath>Things/Building/PocketDimensionBox/Dim_Enter</texPath>
@@ -118,8 +118,8 @@
 			<massCapacity>999999</massCapacity>
 			<restEffectiveness>0.8</restEffectiveness>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionBatteryShare">
-			<compClass>CM_PocketDimension.CompPocketDimensionBatteryShare</compClass>
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionBatteryShare">
+			<compClass>KB_PocketDimension.CompPocketDimensionBatteryShare</compClass>
 			<storedEnergyMax>100.0</storedEnergyMax>
 		</li>
 		<li Class="CompProperties_Battery">
@@ -127,14 +127,14 @@
 			<efficiency>1.00</efficiency>
 			<transmitsPower>true</transmitsPower>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionCreator">
-			<exitDef>CM_PocketDimensionExit</exitDef>
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionCreator">
+			<exitDef>KB_PocketDimensionExit</exitDef>
 			<componentDef>ComponentSpacer</componentDef>
 			<componentMultiplier>1</componentMultiplier>
 			<componentLabel>Advanced components</componentLabel>
 			<powerMultiplier>600.0</powerMultiplier>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_HasButton">
+		<li Class="KB_PocketDimension.CompProperties_HasButton">
           <commandTexture>UI/Commands/Vent</commandTexture>
           <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
           <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
@@ -167,14 +167,14 @@
       <li>ExoticBuilding</li>
     </tradeTags>
 	<researchPrerequisites>
-      <li>CM_PocketDimension_Research_PocketDimension</li>
+      <li>KB_PocketDimension_Research_PocketDimension</li>
     </researchPrerequisites>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionTeenyverse</defName>
+    <defName>KB_PocketDimensionTeenyverse</defName>
     <label>teenyverse</label>
-	<thingClass>CM_PocketDimension.Building_PocketDimensionBox</thingClass>
+	<thingClass>KB_PocketDimension.Building_PocketDimensionBox</thingClass>
 	    <description>A containment field for a pocket dimension.</description>
     <graphicData>	
       <texPath>Things/Building/PocketDimensionBox/Dim_Enter</texPath>
@@ -219,8 +219,8 @@
 			<massCapacity>999999</massCapacity>
 			<restEffectiveness>0.8</restEffectiveness>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionBatteryShare">
-			<compClass>CM_PocketDimension.CompPocketDimensionBatteryShare</compClass>
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionBatteryShare">
+			<compClass>KB_PocketDimension.CompPocketDimensionBatteryShare</compClass>
 			<storedEnergyMax>100.0</storedEnergyMax>
 		</li>
 		<li Class="CompProperties_Battery">
@@ -228,15 +228,15 @@
 			<efficiency>1.00</efficiency>
 			<transmitsPower>true</transmitsPower>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionCreator">
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionCreator">
 			<preMadeMapSize>2</preMadeMapSize>
-			<exitDef>CM_PocketDimensionExit</exitDef>
+			<exitDef>KB_PocketDimensionExit</exitDef>
 			<componentDef>ComponentSpacer</componentDef>
 			<componentMultiplier>1</componentMultiplier>
 			<componentLabel>Advanced components</componentLabel>
 			<powerMultiplier>600.0</powerMultiplier>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_HasButton">
+		<li Class="KB_PocketDimension.CompProperties_HasButton">
           <commandTexture>UI/Commands/Vent</commandTexture>
           <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
           <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
@@ -261,9 +261,9 @@
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionMiniverse</defName>
+    <defName>KB_PocketDimensionMiniverse</defName>
     <label>miniverse</label>
-	<thingClass>CM_PocketDimension.Building_PocketDimensionBox</thingClass>
+	<thingClass>KB_PocketDimension.Building_PocketDimensionBox</thingClass>
 	    <description>A containment field for a pocket dimension.</description>
     <graphicData>	
       <texPath>Things/Building/PocketDimensionBox/Dim_Enter</texPath>
@@ -309,8 +309,8 @@
 			<massCapacity>999999</massCapacity>
 			<restEffectiveness>0.8</restEffectiveness>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionBatteryShare">
-			<compClass>CM_PocketDimension.CompPocketDimensionBatteryShare</compClass>
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionBatteryShare">
+			<compClass>KB_PocketDimension.CompPocketDimensionBatteryShare</compClass>
 			<storedEnergyMax>100.0</storedEnergyMax>
 		</li>
 		<li Class="CompProperties_Battery">
@@ -318,15 +318,15 @@
 			<efficiency>1.00</efficiency>
 			<transmitsPower>true</transmitsPower>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionCreator">
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionCreator">
 			<preMadeMapSize>4</preMadeMapSize>
-			<exitDef>CM_PocketDimensionExit</exitDef>
+			<exitDef>KB_PocketDimensionExit</exitDef>
 			<componentDef>ComponentSpacer</componentDef>
 			<componentMultiplier>1</componentMultiplier>
 			<componentLabel>Advanced components</componentLabel>
 			<powerMultiplier>600.0</powerMultiplier>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_HasButton">
+		<li Class="KB_PocketDimension.CompProperties_HasButton">
           <commandTexture>UI/Commands/Vent</commandTexture>
           <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
           <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
@@ -351,9 +351,9 @@
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionMicroverse</defName>
+    <defName>KB_PocketDimensionMicroverse</defName>
     <label>microverse</label>
-	<thingClass>CM_PocketDimension.Building_PocketDimensionBox</thingClass>
+	<thingClass>KB_PocketDimension.Building_PocketDimensionBox</thingClass>
 	    <description>A containment field for a pocket dimension.</description>
     <graphicData>	
       <texPath>Things/Building/PocketDimensionBox/Dim_Enter</texPath>
@@ -399,8 +399,8 @@
 			<massCapacity>999999</massCapacity>
 			<restEffectiveness>0.8</restEffectiveness>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionBatteryShare">
-			<compClass>CM_PocketDimension.CompPocketDimensionBatteryShare</compClass>
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionBatteryShare">
+			<compClass>KB_PocketDimension.CompPocketDimensionBatteryShare</compClass>
 			<storedEnergyMax>100.0</storedEnergyMax>
 		</li>
 		<li Class="CompProperties_Battery">
@@ -408,15 +408,15 @@
 			<efficiency>1.00</efficiency>
 			<transmitsPower>true</transmitsPower>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionCreator">
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionCreator">
 			<preMadeMapSize>6</preMadeMapSize>
-			<exitDef>CM_PocketDimensionExit</exitDef>
+			<exitDef>KB_PocketDimensionExit</exitDef>
 			<componentDef>ComponentSpacer</componentDef>
 			<componentMultiplier>1</componentMultiplier>
 			<componentLabel>Advanced components</componentLabel>
 			<powerMultiplier>600.0</powerMultiplier>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_HasButton">
+		<li Class="KB_PocketDimension.CompProperties_HasButton">
           <commandTexture>UI/Commands/Vent</commandTexture>
           <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
           <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
@@ -441,9 +441,9 @@
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionExit</defName>
+    <defName>KB_PocketDimensionExit</defName>
     <label>pocket dimension exit</label>
-	<thingClass>CM_PocketDimension.Building_PocketDimensionExit</thingClass>
+	<thingClass>KB_PocketDimension.Building_PocketDimensionExit</thingClass>
     <description>Exit from a pocket dimension.</description>
     <graphicData>	
       <texPath>Things/Building/PocketDimensionBox/Dim_Exit</texPath>
@@ -484,8 +484,8 @@
 			<massCapacity>999999</massCapacity>
 			<restEffectiveness>0.8</restEffectiveness>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_PocketDimensionBatteryShare">
-			<compClass>CM_PocketDimension.CompPocketDimensionBatteryShare</compClass>
+		<li Class="KB_PocketDimension.CompProperties_PocketDimensionBatteryShare">
+			<compClass>KB_PocketDimension.CompPocketDimensionBatteryShare</compClass>
 			<storedEnergyMax>100.0</storedEnergyMax>
 		</li>
 		<li Class="CompProperties_Battery">
@@ -493,7 +493,7 @@
 			<efficiency>1.00</efficiency>
 			<transmitsPower>true</transmitsPower>
 		</li>
-		<li Class="CM_PocketDimension.CompProperties_HasButton">
+		<li Class="KB_PocketDimension.CompProperties_HasButton">
           <commandTexture>UI/Commands/Vent</commandTexture>
           <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
           <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
@@ -514,7 +514,7 @@
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionHopper</defName>
+    <defName>KB_PocketDimensionHopper</defName>
     <label>dimensional transfer hopper</label>
     <description>Automatically transfers item through pocket dimension entrance.</description>
     <thingClass>Building_Storage</thingClass>
@@ -568,7 +568,7 @@
     <designationCategory>Misc</designationCategory>
     <surfaceType>Item</surfaceType>
     <placeWorkers>
-      <li>CM_PocketDimension.PlaceWorker_NextToDimensionalHopperAccepter</li>
+      <li>KB_PocketDimension.PlaceWorker_NextToDimensionalHopperAccepter</li>
     </placeWorkers>
     <uiIconPath>Things/Building/Production/Hopper_MenuIcon</uiIconPath>
     <uiIconScale>0.85</uiIconScale>
@@ -576,10 +576,10 @@
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>CM_PocketDimensionWall</defName>
+    <defName>KB_PocketDimensionWall</defName>
     <label>dimensional containment wall</label>
     <description>An impassable wall.</description>
-    <thingClass>CM_PocketDimension.Building_PocketDimensionWall</thingClass>
+    <thingClass>KB_PocketDimension.Building_PocketDimensionWall</thingClass>
     <graphicData>
       <texPath>Things/Building/PocketDimensionBox/Dim_Wall_Atlas</texPath>
 	  <shaderType>CutoutComplex</shaderType>

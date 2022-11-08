@@ -7,7 +7,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     public static class DefPatches
@@ -23,9 +23,9 @@ namespace CM_PocketDimension
                 List<ThingDef> stonyStuff = DefDatabase<ThingDef>.AllDefsListForReading.Where(def => def.IsStuff && def.stuffProps.categories.Contains(StuffCategoryDefOf.Stony)).ToList();
                 List<ThingDef> metallicStuff = DefDatabase<ThingDef>.AllDefsListForReading.Where(def => def.IsStuff && def.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic)).ToList();
 
-                CopyAndStuffTerrainDef(PocketDimensionDefOf.CM_PocketDimensionFloorWood, woodyStuff);
-                CopyAndStuffTerrainDef(PocketDimensionDefOf.CM_PocketDimensionFloorStone, stonyStuff);
-                CopyAndStuffTerrainDef(PocketDimensionDefOf.CM_PocketDimensionFloorMetal, metallicStuff);
+                CopyAndStuffTerrainDef(PocketDimensionDefOf.KB_PocketDimensionFloorWood, woodyStuff);
+                CopyAndStuffTerrainDef(PocketDimensionDefOf.KB_PocketDimensionFloorStone, stonyStuff);
+                CopyAndStuffTerrainDef(PocketDimensionDefOf.KB_PocketDimensionFloorMetal, metallicStuff);
             }
 
             private static void CopyAndStuffTerrainDef(TerrainDef terrainToCopy, List<ThingDef> stuffList)

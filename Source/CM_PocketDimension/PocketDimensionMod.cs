@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class PocketDimensionMod : Mod
     {
@@ -11,7 +11,7 @@ namespace CM_PocketDimension
 
         public PocketDimensionMod(ModContentPack content) : base(content)
         {
-            var harmony = new Harmony("CM_PocketDimension");
+            var harmony = new Harmony("KB_PocketDimension");
             harmony.PatchAll();
 
             _instance = this;

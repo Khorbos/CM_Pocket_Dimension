@@ -6,7 +6,7 @@ using UnityEngine;
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     public class CompPowerBatteryShare : CompPowerBattery

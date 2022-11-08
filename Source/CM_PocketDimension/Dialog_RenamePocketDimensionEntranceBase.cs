@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     class Dialog_RenamePocketDimensionEntranceBase : Dialog_Rename
     {
@@ -20,9 +20,9 @@ namespace CM_PocketDimension
             if (box != null)
                 box.uniqueName = curName;
             if (exit != null)
-                exit.uniqueName = "CM_PocketDimension_ExitName".Translate(curName);
+                exit.uniqueName = "KB_PocketDimension_ExitName".Translate(curName);
 
-            Messages.Message("CM_RenamePocketDimensionMessage".Translate(curName), MessageTypeDefOf.TaskCompletion);
+            Messages.Message("KB_RenamePocketDimensionMessage".Translate(curName), MessageTypeDefOf.TaskCompletion);
         }
     }
 }

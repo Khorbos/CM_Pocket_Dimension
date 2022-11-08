@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ResearchProjectDef Name="CM_PocketDimension_ResearchBase" Abstract="True">
-		<tab>CM_Dimensional_Manipulation</tab>
+	<ResearchProjectDef Name="KB_PocketDimension_ResearchBase" Abstract="True">
+		<tab>KB_Dimensional_Manipulation</tab>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName="CM_PocketDimension_ResearchBase">
-		<defName>CM_PocketDimension_Research_PocketDimension</defName>
+	<ResearchProjectDef ParentName="KB_PocketDimension_ResearchBase">
+		<defName>KB_PocketDimension_Research_PocketDimension</defName>
 		<label>pocket dimensions</label>
 		<description>Construct a containment field capable of mantaining a stable, spacially tessellated void.</description>
 		<baseCost>4000</baseCost>

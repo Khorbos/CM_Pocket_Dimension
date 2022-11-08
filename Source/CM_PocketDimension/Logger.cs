@@ -2,7 +2,7 @@
 
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public static class Logger
     {

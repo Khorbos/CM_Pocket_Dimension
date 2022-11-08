@@ -4,7 +4,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class JobDriver_EnterPocket : JobDriver
     {

@@ -3,7 +3,7 @@
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     class Building_PocketDimensionWall : Building
     {

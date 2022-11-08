@@ -8,7 +8,7 @@ using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class Building_PocketDimensionEmpty : Building
     {

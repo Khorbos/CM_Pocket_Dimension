@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     public class PlaceWorker_NextToDimensionalHopperAccepter : PlaceWorker
     {
@@ -30,13 +30,13 @@ namespace CM_PocketDimension
 
                     // Might be a blueprint, this won't work with the premade boxes (unless we name them all here... and I'm not doing that because I'll never remember if I add more so :P)
                     ThingDef thingDef = GenConstruct.BuiltDefOf(thingNearby.def) as ThingDef;
-                    if (thingDef != null && thingDef == PocketDimensionDefOf.CM_PocketDimensionBox || thingDef == PocketDimensionDefOf.CM_PocketDimensionExit)
+                    if (thingDef != null && thingDef == PocketDimensionDefOf.KB_PocketDimensionBox || thingDef == PocketDimensionDefOf.KB_PocketDimensionExit)
                     {
                         return true;
                     }
                 }
             }
-            return "CM_MustPlaceNextToDimensionalHopperAccepter".Translate();
+            return "KB_MustPlaceNextToDimensionalHopperAccepter".Translate();
         }
     }
 }

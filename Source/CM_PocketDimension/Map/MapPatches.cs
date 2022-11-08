@@ -4,7 +4,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     public static class MapPatches
@@ -17,7 +17,7 @@ namespace CM_PocketDimension
             public static void getPocketDimensionBiome(Map __instance, ref BiomeDef __result)
             {
                 if (__instance.info?.parent != null && __instance.info.parent is MapParent_PocketDimension)
-                    __result = PocketDimensionDefOf.CM_PocketDimensionBiome;
+                    __result = PocketDimensionDefOf.KB_PocketDimensionBiome;
             }
         }
 

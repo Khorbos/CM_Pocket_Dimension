@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     public class CompPocketDimensionCreator : ThingComp

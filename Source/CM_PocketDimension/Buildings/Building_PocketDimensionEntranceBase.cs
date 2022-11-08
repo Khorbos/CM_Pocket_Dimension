@@ -9,7 +9,7 @@ using RimWorld.Planet;
 using Verse;
 using Verse.AI;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     [StaticConstructorOnStartup]
     public class Building_PocketDimensionEntranceBase : Building
@@ -161,8 +161,8 @@ namespace CM_PocketDimension
             {
                 icon = ContentFinder<Texture2D>.Get("UI/Buttons/Rename", true),
                 action = () => Find.WindowStack.Add(new Dialog_RenamePocketDimensionEntranceBase(this)),
-                defaultLabel = "CM_RenamePocketDimensionLabel".Translate(),
-                defaultDesc = "CM_RenamePocketDimensionDescription".Translate()
+                defaultLabel = "KB_RenamePocketDimensionLabel".Translate(),
+                defaultDesc = "KB_RenamePocketDimensionDescription".Translate()
             };
 
             Building_PocketDimensionEntranceBase otherSide = PocketDimensionUtility.GetOtherSide(this);
@@ -180,8 +180,8 @@ namespace CM_PocketDimension
                             CameraJumper.TrySelect(otherSideTarget.TryGetPrimaryTarget());
                         }
                     },
-                    defaultLabel = this is Building_PocketDimensionBox ? "CM_ViewExitLabel".Translate() : "CM_ViewEntranceLabel".Translate(),
-                    defaultDesc = this is Building_PocketDimensionBox ? "CM_ViewExitDescription".Translate() : "CM_ViewEntranceDescription".Translate(),
+                    defaultLabel = this is Building_PocketDimensionBox ? "KB_ViewExitLabel".Translate() : "KB_ViewEntranceLabel".Translate(),
+                    defaultDesc = this is Building_PocketDimensionBox ? "KB_ViewExitDescription".Translate() : "KB_ViewEntranceDescription".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Commands/ViewQuest"),
                 };
             }
@@ -206,9 +206,9 @@ namespace CM_PocketDimension
             string goThroughMenuItemText = "";
 
             if (isExit)
-                goThroughMenuItemText = "CM_ExitPocketDimension".Translate(this.Label);
+                goThroughMenuItemText = "KB_ExitPocketDimension".Translate(this.Label);
             else
-                goThroughMenuItemText = "CM_EnterPocketDimension".Translate(this.Label);
+                goThroughMenuItemText = "KB_EnterPocketDimension".Translate(this.Label);
 
             
 
@@ -224,7 +224,7 @@ namespace CM_PocketDimension
             {
                 Action goThroughAction = delegate
                 {
-                    Job goThroughJob = JobMaker.MakeJob(PocketDimensionDefOf.CM_EnterPocket, this);
+                    Job goThroughJob = JobMaker.MakeJob(PocketDimensionDefOf.KB_EnterPocket, this);
                     selPawn.jobs.TryTakeOrderedJob(goThroughJob);
                 };
 
@@ -256,9 +256,9 @@ namespace CM_PocketDimension
             if (this.Spawned && this.MapCreated)
             {
                 if (ventOpen)
-                    inspectString += "CM_PocketDimension_VentOpen".Translate();
+                    inspectString += "KB_PocketDimension_VentOpen".Translate();
                 else
-                    inspectString += "CM_PocketDimension_VentClosed".Translate();
+                    inspectString += "KB_PocketDimension_VentClosed".Translate();
 
                 if (compBatteryShare != null && compPowerBattery != null)
                 {
@@ -284,9 +284,9 @@ namespace CM_PocketDimension
         {
             Building_PocketDimensionEntranceBase otherSide = PocketDimensionUtility.GetOtherSide(this);
 
-            if (signal == "CM_PocketDimension_ButtonPressed_On")
+            if (signal == "KB_PocketDimension_ButtonPressed_On")
                 ventOpen = true;
-            else if(signal == "CM_PocketDimension_ButtonPressed_Off")
+            else if(signal == "KB_PocketDimension_ButtonPressed_Off")
                 ventOpen = false;
 
             if (otherSide != null)
@@ -359,7 +359,7 @@ namespace CM_PocketDimension
                 for (int j = 0; j < thingList.Count; j++)
                 {
                     Thing thing = thingList[j];
-                    if ((thing.def == ThingDefOf.Hopper || thing.def == PocketDimensionDefOf.CM_PocketDimensionHopper) && thing as MinifiedThing == null)
+                    if ((thing.def == ThingDefOf.Hopper || thing.def == PocketDimensionDefOf.KB_PocketDimensionHopper) && thing as MinifiedThing == null)
                     {
                         hopper = thing as Building_Storage;
                         SlotGroup slotGroup = hopper.GetSlotGroup();

@@ -13,9 +13,9 @@
 			  <xpath>/Defs</xpath>
 				<value>
 					  <ThingDef ParentName="BuildingBase">
-						<defName>CM_PocketDimensionBox_Magic</defName>
+						<defName>KB_PocketDimensionBox_Magic</defName>
 						<label>ye olde pocket dimension</label>
-						<thingClass>CM_PocketDimension.Building_PocketDimensionBox</thingClass>
+						<thingClass>KB_PocketDimension.Building_PocketDimensionBox</thingClass>
 						<description>A magical container for a pocket dimension.</description>
 						<graphicData>	
 							<texPath>Things/Building/PocketDimensionBox/Magic_Dim_Enter</texPath>
@@ -62,14 +62,14 @@
 								<massCapacity>999999</massCapacity>
 								<restEffectiveness>0.8</restEffectiveness>
 							</li>
-							<li Class="CM_PocketDimension.CompProperties_PocketDimensionCreator">
-								<exitDef>CM_PocketDimensionExit_Magic</exitDef>
+							<li Class="KB_PocketDimension.CompProperties_PocketDimensionCreator">
+								<exitDef>KB_PocketDimensionExit_Magic</exitDef>
 								<componentDef>RawMagicyte</componentDef>
 								<componentMultiplier>40</componentMultiplier>
 								<componentLabel>Raw magicyte</componentLabel>
 								<powerMultiplier>0.0</powerMultiplier>
 							  </li>
-							  <li Class="CM_PocketDimension.CompProperties_HasButton">
+							  <li Class="KB_PocketDimension.CompProperties_HasButton">
 							    <commandTexture>UI/Commands/Vent</commandTexture>
 							    <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
 							    <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
@@ -99,9 +99,9 @@
 			  <xpath>/Defs</xpath>
 				<value>
 					<ThingDef ParentName="BuildingBase">
-						<defName>CM_PocketDimensionExit_Magic</defName>
+						<defName>KB_PocketDimensionExit_Magic</defName>
 						<label>ye olde pocket dimension exit</label>
-						<thingClass>CM_PocketDimension.Building_PocketDimensionExit</thingClass>
+						<thingClass>KB_PocketDimension.Building_PocketDimensionExit</thingClass>
 						<description>Exit from a pocket dimension.</description>
 						<graphicData>	
 						  <texPath>Things/Building/PocketDimensionBox/Magic_Dim_Exit</texPath>
@@ -142,7 +142,7 @@
 								<massCapacity>999999</massCapacity>
 								<restEffectiveness>0.8</restEffectiveness>
 							</li>
-							<li Class="CM_PocketDimension.CompProperties_HasButton">
+							<li Class="KB_PocketDimension.CompProperties_HasButton">
 							  <commandTexture>UI/Commands/Vent</commandTexture>
 							  <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
 							  <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>

@@ -3,7 +3,7 @@
 using RimWorld;
 using Verse;
 
-namespace CM_PocketDimension
+namespace KB_PocketDimension
 {
     class GenStep_PocketDimension : GenStep
     {
@@ -14,7 +14,7 @@ namespace CM_PocketDimension
             TerrainGrid terrainGrid = map.terrainGrid;
             RoofGrid roofGrid = map.roofGrid;
 
-            string terrainDefName = "CM_PocketDimensionFloor";
+            string terrainDefName = "KB_PocketDimensionFloor";
             ThingDef boxStuffDef = null;
 
             // Build terrain defname
@@ -35,7 +35,7 @@ namespace CM_PocketDimension
             // If that terrain was not found, use default metal terrain
             TerrainDef terrainDef = DefDatabase<TerrainDef>.GetNamedSilentFail(terrainDefName);
             if (terrainDef == null)
-                terrainDef = PocketDimensionDefOf.CM_PocketDimensionFloorMetal;
+                terrainDef = PocketDimensionDefOf.KB_PocketDimensionFloorMetal;
 
             foreach (IntVec3 current in map.AllCells)
             {
@@ -43,12 +43,12 @@ namespace CM_PocketDimension
 
                 if (current.OnEdge(map))
                 {
-                    Thing wall = ThingMaker.MakeThing(PocketDimensionDefOf.CM_PocketDimensionWall, boxStuffDef);
+                    Thing wall = ThingMaker.MakeThing(PocketDimensionDefOf.KB_PocketDimensionWall, boxStuffDef);
                     wall.SetFaction(Faction.OfPlayer);
                     GenSpawn.Spawn(wall, current, map);
                 }
 
-                roofGrid.SetRoof(current, PocketDimensionDefOf.CM_PocketDimensionRoof);
+                roofGrid.SetRoof(current, PocketDimensionDefOf.KB_PocketDimensionRoof);
             }
             MapGenFloatGrid elevation = MapGenerator.Elevation;
             foreach (IntVec3 allCell in map.AllCells)

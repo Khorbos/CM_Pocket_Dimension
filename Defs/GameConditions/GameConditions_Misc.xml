@@ -2,7 +2,7 @@
 <Defs>
 
   <GameConditionDef>
-    <defName>CM_PocketDimensionCondition</defName>
+    <defName>KB_PocketDimensionCondition</defName>
     <conditionClass>GameCondition_NoSunlight</conditionClass>
     <label>Pocket Dimension</label>
     <description>You are in an empty space bordered by a thick fog.</description>
