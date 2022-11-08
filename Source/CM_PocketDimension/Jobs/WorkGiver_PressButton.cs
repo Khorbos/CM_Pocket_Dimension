@@ -21,7 +21,7 @@ namespace CM_PocketDimension
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            List<Designation> desList = pawn.Map.designationManager.allDesignations;
+            List<Designation> desList = pawn.Map.designationManager.AllDesignations;
             for (int i = 0; i < desList.Count; i++)
             {
                 if (desList[i].def == PocketDimensionDefOf.CM_PocketDimension_Designation_PressButton)
