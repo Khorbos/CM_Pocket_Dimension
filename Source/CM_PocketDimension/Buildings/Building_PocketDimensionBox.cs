@@ -76,7 +76,7 @@ namespace KB_PocketDimension
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-
+            map.GetComponent<MapComponent_PocketDimension>().Building_PocketDimensionBoxes.Add(this);
             Logger.MessageFormat(this, "Spawning");
 
             compCreator = this.GetComp<CompPocketDimensionCreator>();
@@ -141,7 +141,6 @@ namespace KB_PocketDimension
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
             base.Destroy(mode);
-
             MapParent_PocketDimension dimensionMapParent = null;
 
             if (!string.IsNullOrEmpty(dimensionSeed) && PocketDimensionUtility.MapParents.TryGetValue(dimensionSeed, out dimensionMapParent))
@@ -600,6 +599,12 @@ namespace KB_PocketDimension
             }
 
             return result;
+        }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            this.Map.GetComponent<MapComponent_PocketDimension>().Building_PocketDimensionBoxes.Remove(this);
+            base.DeSpawn(mode);
         }
     }
 }
